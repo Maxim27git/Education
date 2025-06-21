@@ -12,4 +12,4 @@ for i in range(t):
         if x >= mx:
             print('YES')
         else:
-            print('NO')
+            pass
