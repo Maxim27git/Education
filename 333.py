@@ -14,6 +14,7 @@ for i in range(t):
     print(d)
 
     pass
+    # print(d)
     for j in d:
         print(j)
 
