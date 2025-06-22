@@ -13,7 +13,7 @@ for i in range(t):
     count = 0
     print(d)
 
-    
+    pass
     for j in d:
         print(j)
 
