@@ -1,22 +1,21 @@
-from collections import Counter
 
-t = int(input())
-for i in range(t):
-    n, k = map(int, input().split())
-    a = [int(i),
-    for i in input().split()]
-    d = {}
-    for i in a:
-        d[i].get(i, 0)
+import psycopg2
+conn = psycopg2.connect(database="Maxim27", user="postgres",
+ password="Rhumes1212", host="localhost", port=5432)
+cur = conn.cursor()
 
-    d = Counter(a)
-    count = 0
-    print(d)
 
-    pass
-    # print(d)
-    for j in d:
-        print(j)
+cur.execute('''
+ INSERT INTO temp_table (random_text)
+ SELECT md5(random()::text)
+ FROM generate_series(1, 100);
+ ''')
+
+cur.execute('''
+ select * from temp_table;
+ ''')
+print(*cur.fetchall(), sep='\n')
+
 
 
 
